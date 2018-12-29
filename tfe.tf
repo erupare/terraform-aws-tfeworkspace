@@ -32,23 +32,6 @@ resource "tfe_variable" "master_aws_secret_key" {
   workspace_id = "${tfe_workspace.creator.id}"
 }
 
-resource "tfe_variable" "sub_account_aws_access_key" {
-  key          = "sub_account_aws_access_key"
-  value        = "${var.sub_account_aws_access_key}"
-  category     = "terraform"
-  sensitive    = "true"
-  workspace_id = "${tfe_workspace.creator.id}"
-}
-
-
-resource "tfe_variable" "sub_account_aws_secret_key" {
-  key          = "sub_account_aws_secret_key"
-  value        = "${var.sub_account_aws_secret_key}"
-  category     = "terraform"
-  sensitive    = "true"
-  workspace_id = "${tfe_workspace.creator.id}"
-}
-
 
 resource "tfe_variable" "hostname" {
   key      = "hostname"
